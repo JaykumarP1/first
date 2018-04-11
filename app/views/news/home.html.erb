@@ -1,0 +1,14 @@
+<h1>News</h1>
+
+<table>
+<tr>
+  <th></th>
+</tr>
+ <% @con.each do |con| %>
+      <tr>
+        <td><%= con.s_no %></td>
+        <td><%= image_tag(con.img,size:"100x100") %></td>
+        <td><%= link_to con.title,con.url %></td>
+      </tr>
+    <% end %>
+</table>
